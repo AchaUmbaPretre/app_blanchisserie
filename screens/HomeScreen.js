@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View, SafeAreaView, Alert, ScrollView, Pressable, Image } from 'react-native'
+import { StyleSheet, Text, View, SafeAreaView, TextInput, Alert, ScrollView, Pressable, Image } from 'react-native'
 import React, { useEffect, useState } from 'react'
 import * as Location from "expo-location";
 import { Feather } from "@expo/vector-icons";
@@ -144,6 +144,11 @@ const HomeScreen = () => {
                     />
                 </Pressable>
             </View>
+
+            <View>
+                <TextInput/>
+            </View>
+
         </ScrollView>
     );
 };
