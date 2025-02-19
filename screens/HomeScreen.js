@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react'
 import * as Location from "expo-location";
 import { Feather } from "@expo/vector-icons";
 import { MaterialIcons } from "@expo/vector-icons";
+import Carousel from '../components/Carousel';
 
 
 const HomeScreen = () => {
@@ -160,6 +161,10 @@ const HomeScreen = () => {
             >
                 <TextInput  placeholder="Search for items or More"/>
                 <Feather name="search" size={24} color="#fd5c63" />
+            </View>
+
+            <View>
+                <Carousel/>
             </View>
 
         </ScrollView>
