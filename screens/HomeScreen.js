@@ -145,8 +145,21 @@ const HomeScreen = () => {
                 </Pressable>
             </View>
 
-            <View>
-                <TextInput/>
+            <View
+                style={{
+                    margin: 10, 
+                    padding: 9,
+                    flexDirection: "row",
+                    alignItems: "center",
+                    justifyContent: "space-between",
+                    borderWidth: 0.8,
+                    borderColor: "#C0C0C0",
+                    borderRadius: 10,
+                    backgroundColor: '#fff'
+                    }}
+            >
+                <TextInput  placeholder="Search for items or More"/>
+                <Feather name="search" size={24} color="#fd5c63" />
             </View>
 
         </ScrollView>
