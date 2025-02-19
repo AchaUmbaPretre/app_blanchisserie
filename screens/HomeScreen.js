@@ -54,6 +54,23 @@ const HomeScreen = () => {
             );
           }
 
+          const { coords } = await Location.getCurrentPositionAsync();
+          if (coords) {
+            const { latitude, longitude } = coords;
+      
+            let response = await Location.reverseGeocodeAsync({
+              latitude,
+              longitude,
+            });
+      
+            // console.log(response)
+      
+            for (let item of response) {
+              let address = `${item.name} ${item.city} ${item.postalCode}`;
+              setdisplayCurrentAddress(address);
+            }
+          }
+
     };
 
     return (
