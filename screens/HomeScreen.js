@@ -1,6 +1,9 @@
-import { StyleSheet, Text, View, SafeAreaView, Alert } from 'react-native'
+import { StyleSheet, Text, View, SafeAreaView, Alert, ScrollView, Pressable, Image } from 'react-native'
 import React, { useEffect, useState } from 'react'
 import * as Location from "expo-location";
+import { Feather } from "@expo/vector-icons";
+import { MaterialIcons } from "@expo/vector-icons";
+
 
 const HomeScreen = () => {
     const [displayCurrentAddress, setdisplayCurrentAddress] = useState(
@@ -124,9 +127,24 @@ const HomeScreen = () => {
       ];
 
     return (
-        <SafeAreaView>
-            <Text>HomeScreen</Text>
-        </SafeAreaView>
+        <ScrollView style={{ backgroundColor: "#F0F0F0", flex: 1, marginTop: 50 }}>
+            <View style={{ flexDirection: "row", alignItems: "center", padding: 10 }}>
+                <MaterialIcons name="location-on" size={30} color="#fd5c63" />
+                <View>
+                    <Text style={{ fontSize: 18, fontWeight: "600" }}>Home</Text>
+                    <Text>{displayCurrentAddress}</Text>
+                </View>
+
+                <Pressable onPress={() => navigation.navigate("Profile")}  style={{ marginLeft: "auto", marginRight: 7 }}>
+                    <Image
+                    style={{ width: 40, height: 40, borderRadius: 20 }}
+                    source={{
+                        uri: "https://lh3.googleusercontent.com/ogw/AAEL6sh_yqHq38z35QMy5Fnb8ZIxicdxCIVM9PeBD2j-=s64-c-mo",
+                    }}
+                    />
+                </Pressable>
+            </View>
+        </ScrollView>
     );
 };
 
