@@ -1,19 +1,35 @@
 import { StyleSheet, Text, View, SafeAreaView } from 'react-native'
-import React, { useEffect } from 'react'
-import * as Location from 'expo-location'
+import React, { useEffect, useState } from 'react'
+import * as Location from "expo-location";
 
 const HomeScreen = () => {
-    useEffect(()=> {
+    const [displayCurrentAddress, setdisplayCurrentAddress] = useState(
+        "we are loading your location"
+      );
+    const [locationServicesEnabled, setlocationServicesEnabled] = useState(false);
+
+
+
+    useEffect(() => {
         checkIfLocationEnabled();
         getCurrentLocation();
-    }, [])
-  return (
-    <SafeAreaView>
-      <Text>HomeScreen</Text>
-    </SafeAreaView>
-  )
-}
+    }, []);
 
-export default HomeScreen
+    const checkIfLocationEnabled = async () => {
+        // Logique ici
+    };
 
-const styles = StyleSheet.create({})
+    const getCurrentLocation = async () => {
+        // Logique ici
+    };
+
+    return (
+        <SafeAreaView>
+            <Text>HomeScreen</Text>
+        </SafeAreaView>
+    );
+};
+
+export default HomeScreen;
+
+const styles = StyleSheet.create({});
