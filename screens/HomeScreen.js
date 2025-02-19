@@ -62,9 +62,7 @@ const HomeScreen = () => {
               latitude,
               longitude,
             });
-      
-            // console.log(response)
-      
+            
             for (let item of response) {
               let address = `${item.name} ${item.city} ${item.postalCode}`;
               setdisplayCurrentAddress(address);
