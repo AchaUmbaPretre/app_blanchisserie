@@ -163,9 +163,7 @@ const HomeScreen = () => {
                 <Feather name="search" size={24} color="#fd5c63" />
             </View>
 
-            <View>
-                <Carousel/>
-            </View>
+            <Carousel/>
 
         </ScrollView>
     );
